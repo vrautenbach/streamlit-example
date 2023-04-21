@@ -5,5 +5,6 @@ import pandas as pd
 import streamlit as st
 
 st.write("This is my first sentence")
-routes = pd.read_csv('airlines.dat')
+col_names = ["Airline ID", "Name","Alias","IATA","ICAO","Callsign","Country","Active"]
+routes = pd.read_csv('airlines.dat', names = col_names)
 routes
