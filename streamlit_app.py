@@ -17,3 +17,6 @@ airports
 grouped = airports.groupby('Country')
 output= grouped.aggregate({'Name':'count'})
 output
+
+map= st.map(airports)
+map
