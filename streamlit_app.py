@@ -26,3 +26,4 @@ locations.to_frame(name='airport_locations')
 st.write(type(locations))
 airport_locations= pd.DataFrame(locations)
 airport_locations
+st.write(type(airport_locations))
