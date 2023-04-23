@@ -24,4 +24,5 @@ airports['geometry']= [Point(xy) for xy in zip(airports['Longitude'], airports['
 locations= airports['geometry']
 locations.to_frame(name='airport_locations')
 st.write(type(locations))
-
+airport_locations= pd.DataFrame(locations)
+airport_locations
