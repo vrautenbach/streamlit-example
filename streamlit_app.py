@@ -20,7 +20,9 @@ airports
 grouped = airports.groupby('Country')
 output= grouped.aggregate({'Name':'count'})
 output
-
+Airportsgrouped = airlines.groupby("Country")["Name"].count().reset_index()
+st.table(Airportsgrouped)
+st.bar_chart(Airportsgrouped, x="Country", y="Name")
 
 latitude = airports['latitude']
 longitude = airports['longitude']
