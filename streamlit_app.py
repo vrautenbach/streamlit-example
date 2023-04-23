@@ -17,7 +17,7 @@ airport_col = ['Airport ID', 'Name', 'City', 'Country', 'IATA', 'ICAO', 'latitud
 airports = pd.read_csv('airports.dat', sep =",", names=airport_col)
 airports
 grouped = airports.groupby('Country')
-output= grouped.aggregate({'Name':'Number'})
+output= grouped.aggregate({'Name':'count'})
 output
 
 
