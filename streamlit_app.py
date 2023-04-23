@@ -19,5 +19,8 @@ grouped = airports.groupby('Country')
 output= grouped.aggregate({'Name':'count'})
 output
 
-map= st.map(airports)
+airports['geometry']= [Point(xy) for xy in zip(airports['Longitude'], airports['Latitude'])]
+locations= airports['geometry']
+
+map= st.map(locations)
 map
