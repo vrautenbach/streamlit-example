@@ -13,7 +13,7 @@ airlines
 grouped = airlines.groupby(["Country","Active"]).size()
 grouped
 
-airport_col = ['Airport ID', 'Name', 'City', 'Country', 'IATA', 'ICAO', 'Latitude','Longitude', 'Altitude', 'Time Zone', 'DST', 'Tz db time', 'Type', 'Source']
+airport_col = ['Airport ID', 'Name', 'City', 'Country', 'IATA', 'ICAO', 'latitude','longitude', 'Altitude', 'Time Zone', 'DST', 'Tz db time', 'Type', 'Source']
 airports = pd.read_csv('airports.dat', sep =",", names=airport_col)
 airports
 grouped = airports.groupby('Country')
