@@ -10,7 +10,7 @@ st.write("This is my first sentence")
 col_names = ["Airline ID", "Name","Alias","IATA","ICAO","Callsign","Country","Active"]
 airlines = pd.read_csv('airlines.dat', names = col_names)
 airlines
-groupedAirlines = airlines.groupby("Country")["Active"].count().reset_index()
+groupedAirlines = airlines.groupby("Country")[["Active"]=="Y"].count().reset_index()
 st.table(groupedAirlines)
 st.bar_chart(groupedAirlines, x="Country", y="Active")
 
