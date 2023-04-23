@@ -15,11 +15,10 @@ st.bar_chart(groupedAirlines, x="Country", y="Active Airlines")
 
 airport_col = ['Airport ID', 'Number of airports', 'City', 'Country', 'IATA', 'ICAO', 'latitude','longitude', 'Altitude', 'Time Zone', 'DST', 'Tz db time', 'Type', 'Source']
 airports = pd.read_csv('airports.dat', sep =",", names=airport_col)
-airports
 grouped = airports.groupby('Country')
 output= grouped.aggregate({'Number of airports':'count'}).reset_index()
 st.table(output)
-st.bar_chart(output, x="Country", y="Count")
+st.bar_chart(output, x="Country", y="Number of airports")
 
 latitude = airports['latitude']
 longitude = airports['longitude']
