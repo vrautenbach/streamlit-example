@@ -1,5 +1,4 @@
 altair
 pandas
 streamlit
-shapely.geometry
 geopandas
