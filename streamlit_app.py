@@ -3,6 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import geopandas as gpd 
+from shapely.geometry import Point
 import streamlit as st
 
 st.write("This is my first sentence")
