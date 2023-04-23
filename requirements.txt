@@ -1,4 +1,6 @@
 altair
 pandas
 streamlit
+shapely.geometry
+point
 geopandas
