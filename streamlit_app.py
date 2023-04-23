@@ -21,7 +21,7 @@ grouped = airports.groupby('Country')
 output= grouped.aggregate({'Name':'count'})
 output
 
-st.bar_chart(output, x="Country", y='Name')
+st.bar_chart(output, x="Country", y='count')
 latitude = airports['latitude']
 longitude = airports['longitude']
 airport_locations = pd.DataFrame(latitude).join(longitude)
