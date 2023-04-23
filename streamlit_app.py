@@ -20,10 +20,13 @@ grouped = airports.groupby('Country')
 output= grouped.aggregate({'Name':'count'})
 output
 
-airports['geometry']= [Point(xy) for xy in zip(airports['Longitude'], airports['Latitude'])]
-locations= airports['geometry']
-
-airport_locations= pd.DataFrame(locations)
+latitude = airports['Latitude']
+longitude = airports['Longitude']
+airport_locations = pd.DataFrame(latitude).join(longitude)
 airport_locations
+
+#airports['geometry']= [Point(xy) for xy in zip(airports['Longitude'], airports['Latitude'])]
+#locations= airports['geometry']
+
 map = st.map(airport_locations)
 map
