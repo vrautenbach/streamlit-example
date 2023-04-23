@@ -22,6 +22,7 @@ output
 
 airports['geometry']= [Point(xy) for xy in zip(airports['Longitude'], airports['Latitude'])]
 locations= airports['geometry']
+locations.to_frame(name='airport_locations')
 
 map= st.map(locations)
 map
