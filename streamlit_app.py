@@ -12,7 +12,7 @@ airlines = pd.read_csv('airlines.dat', names = col_names)
 airlines
 grouped = airlines.groupby("Country")["Active"].count()
 grouped
-st.bar_chart(data=grouped, x="Country", y="Active")
+st.bar_chart(grouped, x="Country", y="Active")
 airport_col = ['Airport ID', 'Name', 'City', 'Country', 'IATA', 'ICAO', 'latitude','longitude', 'Altitude', 'Time Zone', 'DST', 'Tz db time', 'Type', 'Source']
 airports = pd.read_csv('airports.dat', sep =",", names=airport_col)
 airports
