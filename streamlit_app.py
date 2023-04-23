@@ -10,7 +10,7 @@ st.write("This is my first sentence")
 col_names = ["Airline ID", "Name","Alias","IATA","ICAO","Callsign","Country","Active"]
 airlines = pd.read_csv('airlines.dat', names = col_names)
 airlines
-grouped = airlines.groupby(["Country"]["Active"]).count()
+grouped = airlines.groupby("Country")["Active"].count()
 grouped
 st.bar_chart(data=grouped, x="Country", y="Active")
 airport_col = ['Airport ID', 'Name', 'City', 'Country', 'IATA', 'ICAO', 'latitude','longitude', 'Altitude', 'Time Zone', 'DST', 'Tz db time', 'Type', 'Source']
