@@ -27,3 +27,5 @@ st.write(type(locations))
 airport_locations= pd.DataFrame(locations)
 airport_locations
 st.write(type(airport_locations))
+map = st.map(airport_locations)
+map
