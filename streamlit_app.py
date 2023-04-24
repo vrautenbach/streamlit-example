@@ -26,7 +26,8 @@ longitude = airports['longitude']
 airport_locations = pd.DataFrame(latitude).join(longitude)
 airport_locations
 
-
+airportMin = airports.groupby('Country')['Number of airports'].min()
+airportMin
 map = st.map(airport_locations)
 map
 
