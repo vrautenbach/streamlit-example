@@ -24,13 +24,7 @@ longitude = airports['longitude']
 airport_locations = pd.DataFrame(latitude).join(longitude)
 airport_locations
 
-minimum = airports.min()
-maximim = airports.max()
-average = airports.mean()
 
-minimum
-maximum
-average
 
 
 map = st.map(airport_locations)
