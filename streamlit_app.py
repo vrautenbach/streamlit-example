@@ -11,7 +11,6 @@ col_names = ["Airline ID", "Name","Alias","IATA","ICAO","Callsign","Country","Ac
 airlines = pd.read_csv('airlines.dat', names = col_names)
 groupedAirlines = airlines.groupby("Country")["Active Airlines"].count().reset_index()
 st.bar_chart(groupedAirlines, x="Country", y="Active Airlines")
-high = groupedAirlines[groupedAirlines["Active Airlines"].max()
 
 
 airport_col = ['Airport ID', 'Number of airports', 'City', 'Country', 'IATA', 'ICAO', 'latitude','longitude', 'Altitude', 'Time Zone', 'DST', 'Tz db time', 'Type', 'Source']
