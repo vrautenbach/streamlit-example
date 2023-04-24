@@ -11,8 +11,7 @@ col_names = ["Airline ID", "Name","Alias","IATA","ICAO","Callsign","Country","Ac
 airlines = pd.read_csv('airlines.dat', names = col_names)
 groupedAirlines = airlines.groupby("Country")["Active Airlines"].count().reset_index()
 st.bar_chart(groupedAirlines, x="Country", y="Active Airlines")
-most = airlines.groupby("Country")["Active Airlines"].max().reset_index()
-most
+
 
 airport_col = ['Airport ID', 'Number of airports', 'City', 'Country', 'IATA', 'ICAO', 'latitude','longitude', 'Altitude', 'Time Zone', 'DST', 'Tz db time', 'Type', 'Source']
 airports = pd.read_csv('airports.dat', sep =",", names=airport_col)
@@ -24,6 +23,14 @@ latitude = airports['latitude']
 longitude = airports['longitude']
 airport_locations = pd.DataFrame(latitude).join(longitude)
 airport_locations
+
+minimum = airports.min()
+maximim = airports.max()
+average = airports.mean()
+
+minimum
+maximum
+average
 
 
 map = st.map(airport_locations)
