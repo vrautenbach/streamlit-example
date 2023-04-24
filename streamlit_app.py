@@ -6,7 +6,7 @@ import geopandas as gpd
 from shapely.geometry import Point
 import streamlit as st
 
-st.write("The world of travel.")
+st.write("The world of travel")
 col_names = ["Airline ID", "Name","Alias","IATA","ICAO","Callsign","Country","Active Airlines"]
 airlines = pd.read_csv('airlines.dat', names = col_names)
 groupedAirlines = airlines.groupby("Country")["Active Airlines"].count().reset_index()
