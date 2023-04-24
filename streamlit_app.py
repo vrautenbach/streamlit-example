@@ -23,14 +23,10 @@ avg_airlines = ActiveAirlines.mean()
 highest_airlines
 
 #Print the lowest MPG
-print('')
-print(':::LOWEST ActiveAirlines:::')
-print(lowest_airlines)
+lowest_airlines
 
 # Print the AVG MPG
-print('')
-print(':::AVERAGE ActiveAirlines:::')
-print(avg_airlines)
+avg_airlines
 
 airport_col = ['Airport ID', 'Number of airports', 'City', 'Country', 'IATA', 'ICAO', 'latitude','longitude', 'Altitude', 'Time Zone', 'DST', 'Tz db time', 'Type', 'Source']
 airports = pd.read_csv('airports.dat', sep =",", names=airport_col)
