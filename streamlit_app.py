@@ -12,16 +12,6 @@ airlines = pd.read_csv('airlines.dat', names = col_names)
 groupedAirlines = airlines.groupby("Country")["Active Airlines"].count().reset_index()
 st.bar_chart(groupedAirlines, x="Country", y="Active Airlines")
 
-Highest = airlines[airlines["Active Airlines"].max()].reset_index()
-Highest
-
-#c
-#min = cars.loc[cars["MPG"].min()]['Car']
-#print("The car with the lowest MPG is "+ str(min))
-
-#d
-#Averages = cars["MPG"].mean()
-#print("The average MPG for all the cars is " + str(Averages))
 
 airport_col = ['Airport ID', 'Number of airports', 'City', 'Country', 'IATA', 'ICAO', 'latitude','longitude', 'Altitude', 'Time Zone', 'DST', 'Tz db time', 'Type', 'Source']
 airports = pd.read_csv('airports.dat', sep =",", names=airport_col)
