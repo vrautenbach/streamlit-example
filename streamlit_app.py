@@ -12,7 +12,7 @@ airlines = pd.read_csv('airlines.dat', names = col_names)
 groupedAirlines = airlines.groupby("Country")["Active Airlines"].count().reset_index()
 st.bar_chart(groupedAirlines, x="Country", y="Active Airlines")
 
-max = airlines.loc[airlines["Active Airlines"].idxmax()]['Country']
+max = airlines.loc[airlines["Active Airlines"].max()]['Country']
 print("The country with the highest number od airlines is "+str(max))
 
 #c
