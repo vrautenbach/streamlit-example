@@ -13,7 +13,7 @@ groupedAirlines = airlines.groupby("Country")["Active Airlines"].count().reset_i
 st.bar_chart(groupedAirlines, x="Country", y="Active Airlines")
 
 Highest = airlines.groupby("Country")["Active Airlines"].max().reset_index()
-print("The country with the highest number od airlines is "+str(Highest))
+Highest
 
 #c
 #min = cars.loc[cars["MPG"].min()]['Car']
