@@ -19,10 +19,8 @@ highest_airlines = ActiveAirlines.max()
 lowest_airlines = ActiveAirlines.min()
 avg_airlines = ActiveAirlines.mean()
 
-# Print the highest MPG
-print('')
-print(':::HIGHEST ActiveAirlines:::')
-print(highest_airlines)
+# Print the highest 
+highest_airlines
 
 #Print the lowest MPG
 print('')
