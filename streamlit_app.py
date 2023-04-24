@@ -7,11 +7,10 @@ from shapely.geometry import Point
 import streamlit as st
 
 st.write("This is my first sentence")
-col_names = ["Airline ID", "Name","Alias","IATA","ICAO","Callsign","Country","Active_Airlines"]
+col_names = ["Airline ID", "Name","Alias","IATA","ICAO","Callsign","Country","Active Airlines"]
 airlines = pd.read_csv('airlines.dat', names = col_names)
-Active = airlines[airlines.Active_Airlines == 'Y']
-groupedAirlines = airlines.groupby("Country")[Active].count().reset_index()
-st.bar_chart(groupedAirlines, x="Country", y="Active_Airlines")
+groupedAirlines = airlines.groupby("Country")["Active Airlines"].count().reset_index()
+st.bar_chart(groupedAirlines, x="Country", y="Active Airlines")
 
 airport_col = ['Airport ID', 'Number of airports', 'City', 'Country', 'IATA', 'ICAO', 'latitude','longitude', 'Altitude', 'Time Zone', 'DST', 'Tz db time', 'Type', 'Source']
 airports = pd.read_csv('airports.dat', sep =",", names=airport_col)
