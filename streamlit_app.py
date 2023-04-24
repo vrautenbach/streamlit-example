@@ -19,7 +19,7 @@ grouped = airports.groupby('Country')
 output= grouped.aggregate({'Number of airports':'count'}).reset_index() 
 st.bar_chart(output, x="Country", y="Number of airports")
 
-output2= grouped.aggregate({'Number of airports':'min', 'max','mean'})
+output2= grouped.aggregate({'Number of airports':'min','max','mean'})
 output2
 groupedAirlines
 output
