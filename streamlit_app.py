@@ -12,7 +12,7 @@ airlines = pd.read_csv('airlines.dat', names = col_names)
 groupedAirlines = airlines.groupby("Country")["Active Airlines"].count().reset_index()
 st.bar_chart(groupedAirlines, x="Country", y="Active Airlines")
 
-Highest = airlines.[airlines["Active Airlines"].max()].reset_index()
+Highest = airlines[airlines["Active Airlines"].max()].reset_index()
 Highest
 
 #c
